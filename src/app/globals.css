@@ -1,27 +1,493 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+*::selection{
+  color: #0f0f0f;
+  background-color: red;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home_hero{
+  position: relative;
+  display: flex;
+  align-items:end;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  height: 900px;
+  width: 100%;
+  box-shadow:  0px 10px 20px gray;
+  mix-blend-mode: multiply;
+}
+
+
+.container{
+  width: 80%;
+  height: 80%;
+  align-items: end;
+  display: flex;
+}
+
+.intro{
+  width: 40%;
+  height: 80%;
+  align-items: center;
+  padding-top: 150px;
+}
+
+.intro h1{
+  color: white;
+  font-size: 100px;
+}
+
+.intro h2{
+  color: white;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.intro span{
+  color: red;
+  margin-left: 20px;
+  font-size: 50px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.intro p{
+  color: white;
+  padding-top: 18px;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.contact_me_btn{
+  /* position: absolute;
+  left: 200px;
+  bottom: 50px; */
+  margin-top: 120px;
+}
+
+.btn{
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  font-weight: 600;
+  border: 5px solid red;
+  padding: 20px 25px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dev_image{
+  width: 60%;
+  height: 80%;
+  align-items: end;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  opacity: 70%;
+}
+
+.developer_image{
+  display: inline-block;
+  /* position: absolute; */
+  /* z-index: 1; */
+}
+
+.bg_circle{
+  -webkit-filter: blur(200px);
+  filter: blur(200px);
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  z-index: -1;
+  top: 50%;
+  right: 30px;
+  border-radius: 500px;
+}
+
+.bg_circle{
+  animation: bg_circle 25s infinite;
+}
+
+@keyframes bg_circle  {
+  25% {transform: translateY(-800px);}
+  50% {transform: translateX(-1100px);}
+  75% {transform: translateY(-000px);}
+  75% {transform: translateX(-400px);}
+  100% {transform: translateX(0px);}
+}
+
+
+.about{
+  height: 600px;
+  background-color: #0f0f0f;
+  width: 100%;
+}
+
+.about_content{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5% 0;
+}
+
+.about_content > h1{
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.line{
+  margin-top: 10px;
+  width: 5%;
+  height: 3px;
+  background-color: red;
+}
+
+.para{
+  width: 80%;
+  color: white;
+  font-size: large;
+}
+
+.skills{
+  background-color: #0f0f0f;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.skill_content{
+  width: 80%;
+  margin:  0 auto;
+}
+
+.skills > div > h1{
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.skill_box{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  min-width: 300px;
+  height: 300px;
+  color: white;
+  background-color:#3f3f3f;
+  text-align: center;
+  align-content: center;
+  margin:auto;  
+  border-radius: 20px;
+}
+
+.box:hover{
+  background-color: white;
+  color: black;
+  transition: 400ms;
+  box-shadow: 0px 8px 5px 0px rgba(247, 14, 14, 0.7);
+  mix-blend-mode:lighten;
+  .nextjs_logo{
+    filter: invert(100%) sepia(100%) saturate(500%) hue-rotate(180deg);
   }
+}
+
+.svg_icon{
+  margin-bottom: 70px;
+}
+
+.box p{
+  font-size: x-large;
+}
+
+.portfolio{
+  /* height: 600px; */
+  width: 100%;
+  padding-bottom: 20px;
+  background-color:#0f0f0f;
+}
+
+.portfolio_content{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.portfolio_content h1{
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.folio_collection{
+  display: flex;
+  gap: 25px 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.folio_item{
+  position: relative;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  /* background-color: red; */
+}
+
+.item{
+  position: relative;
+  /* width: 500px;
+  height: 500px; */
+}
+
+.overlay_menu{
+  /* cursor: pointer; */
+  transition: 300ms;
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* background-color: rgba(63, 63, 63, 0.9); */
+}
+
+.overlay_menu div{
+  transition: 300ms;
+  visibility: hidden;
+  align-content: center;
+}
+
+.overlay_menu h4{
+  transition: 100ms;
+  visibility: hidden;
+  font-size: x-large;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.overlay_menu p{
+  transition: 100ms;
+  visibility: hidden;
+  color: white;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.folio_item:hover{
+  .overlay_menu{
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.8);
+  };
+  .overlay_menu h4, .overlay_menu p{
+    visibility: visible;
+  }
+}
+
+.view_all_btn{
+  text-align: center;
+  margin: 70px auto;
+}
+
+.view_btn{
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-size: x-large;
+}
+
+.view_btn:hover{
+  background-color: rgb(177, 5, 5);
+}
+
+.view_btn:active{
+  background-color: rgb(218, 28, 28);
+}
+
+.experience{
+  width: 100%;
+  padding: 40px 0;
+  background-color:#1a1a1a;
+  /* height: 600px; */
+}
+
+.experience_content{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.experience_content h1{
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  color: white;
+}
+
+.exp{
+  display: flex;
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  
+}
+
+.rt_side{
+  width: 70%;
+  /* border: 1px solid yellow; */
+  padding: 20px;
+}
+
+.rt_side h2{
+  color: white;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.rt_side h5{
+  color: white;
+  font-size: larger;
+  font-weight: 300;
+  padding-bottom: 15px;
+}
+
+.rt_side p{
+  color: white;
+  font-size: medium;
+}
+
+.lft_side{
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100px auto;
+  
+}
+
+.year_label{
+  width: 160%;
+  /* border: 2px solid aqua; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.year_label div{
+  width: 120px;
+  height: 60px;
+  background-color: rgb(122, 122, 122);
+  align-content: center;
+}
+
+.year_label div h4{
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+}
+
+.cirlce{
+  position: relative;
+  width: 38%;
+  /* border: 2px solid violet; */
+  justify-self: end;
+}
+
+.cirlce div{
+  position: relative;
+  top: 35px;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 187, 0);
+  border-radius: 30px;
+  margin: auto;
+  align-self: center;
+  box-shadow: 0px 0px 20px 2px gold;
+}
+
+.ex_line{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 82%;
+  box-shadow: inset -4px 0px 0px 0px white;
+}
+
+.contact_section{
+  width: 100%;
+  background-color:#0f0f0f;
+  padding: 50px 0;
+}
+
+.contact_content{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_content h1{
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.contact_content p{
+  color: white;
+  font-size: large;
+}
+
+.contact_btn{
+  margin: 25px auto;
+  width: 150px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-size: x-large;
+}
+
+.contact_btn:hover{
+  background-color: rgb(177, 0, 0);
+}
+
+.contact_btn:active{
+  background-color: rgb(184, 4, 4);
 }

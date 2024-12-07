@@ -1,0 +1,153 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+body{
+    position: relative;
+    z-index: -1;
+    /* overflow: hidden; */
+    background-color: #1a1a1a;
+}
+.contact_main{
+    /* position: absolute; */
+    /* z-index: 0; */
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+.circle_container{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contact_container{    
+    /* position: absolute; */
+    /* z-index: 2; */
+    width: 80%;
+    padding: 200px 0 50px 0;
+    text-align: center;
+}
+
+.bg_circle{
+    /* opacity: 100%; */
+    /* visibility: hidden; */
+    /* display: none; */
+    /* overflow: hidden; */
+}
+
+/* @keyframes  */
+
+.cont_bg_circle1{
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    left: 1000px;
+    width: 500px;
+    height: 500px;
+    opacity: 40%;
+    background-color: red;
+    /* overflow: hidden; */
+}
+.cont_bg_circle2{
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    left: 1700px;
+    top: 800px;
+    width: 100px;
+    height: 100px;
+    opacity: 60%;
+    background-color: white;
+}
+
+
+.cont_bg_circle2{
+    animation: cont_bg_circle2 25s infinite;
+}
+  
+@keyframes cont_bg_circle2{
+25% {transform: translateY(-20vh);}
+75% {transform: translateY(-40vh);}
+50% {transform: translateX(-110vw);}
+50% {transform: translateY(-80vh);}
+75% {transform: translateX(-100vw);}
+80% {transform: translateY(-40vh);}
+80% {transform: translateX(-150vw);}
+100% {transform: translateX(0vw);}
+}
+  
+  
+
+.cont_head h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.cont_form{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid white; 
+    margin: 20px auto;
+    padding: 50px 0;
+    -webkit-backdrop-filter: blur(200px);
+    backdrop-filter: blur(200px);
+    border-radius: 20px;
+}
+
+.inner_form{
+    font-size: x-large;
+    gap: 10px;
+    margin: 0 auto;
+    text-align: left;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner_form input{
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    transition: all 400ms;
+}
+
+.inner_form input:focus{
+    border-bottom: 2px solid red;
+}
+
+.inner_form label{
+    color: white;
+}
+
+.inner_form textarea{
+    outline: none;
+    height: 150px;
+    background: none;
+    transition: all 400ms;
+}
+
+.inner_form textarea:focus{
+    border: 2px solid red;
+}
+
+.sbmit_btn{
+    /* font-size: x-large; */
+    align-self: center;
+    margin-top: 30px;
+    padding: 10px 40px;
+    border: none;
+    
+}
